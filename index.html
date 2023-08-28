@@ -7,7 +7,12 @@
 <title>Instituto Marco da Paz</title>
 </head>
 <body style="margin:0px;padding:0px;overflow:hidden">
-	<div id="folder"></div>
+	<div
+		id="pdfRendered"
+		style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px"
+		height="100%"
+		width="100%">
+	</div>
 	<!-- <iframe
 		src="http://docs.google.com/gview?url=http://institutomarcodapaz.netlify.app/folder.pdf&embedded=true"
 		type="application/pdf"
@@ -16,8 +21,14 @@
 		width="100%">
 	</iframe> -->
 </body>
-<script>PDFObject.embed("./folder.pdf", "#folder");</script>
-<style>
-	.pdfobject-container { height: 100%; width: 100; border: 1rem solid rgba(0,0,0,.1); }
-</style>
+<script>
+	var pdf = new PDFObject({
+	  url: "./folder.pdf",
+	  id: "pdfRendered",
+	  pdfOpenParams: {
+	    view: "FitH"
+	  }
+	}).embed("pdfRenderer");	
+</script>
+
 </html> 
