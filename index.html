@@ -22,13 +22,10 @@
 	</iframe> -->
 </body>
 <script>
-	var pdf = new PDFObject({
-	  url: "./folder.pdf",
-	  id: "pdfRendered",
-	  pdfOpenParams: {
-	    view: "FitH"
-	  }
-	}).embed("pdfRenderer");	
+	const options =	{
+	    pdfOpenParams: { view: 'FitH' }
+	};
+	PDFObject.embed("./folder.pdf", "#pdfRendered", options);
 </script>
 
 </html> 
