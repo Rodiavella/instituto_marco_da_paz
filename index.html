@@ -1,15 +1,20 @@
  <!DOCTYPE html>
 <html>
+<header>
+	<script src="/js/pdfobject.js"></script>
+	<script>PDFObject.embed("./folder.pdf", "#folder");</script>
+</header>
 <head>
 <title>Instituto Marco da Paz</title>
 </head>
 <body style="margin:0px;padding:0px;overflow:hidden">
-	<iframe
+	<div id="folder"></div>
+	<!-- <iframe
 		src="http://docs.google.com/gview?url=http://institutomarcodapaz.netlify.app/folder.pdf&embedded=true"
 		type="application/pdf"
 		style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px"
 		height="100%"
 		width="100%">
-	</iframe>
+	</iframe> -->
 </body>
 </html> 
